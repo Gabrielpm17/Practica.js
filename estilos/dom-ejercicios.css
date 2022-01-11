@@ -151,36 +151,29 @@ img {
   margin: auto;
 }
 
-.btn-up {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: var(--main-color);
-  font-weight: 500;
-  position: fixed;
-  right: 7rem;
+.scroll-up-btn {
   bottom: 1vh;
-  z-index: 130;
-  font-size: 50px;
-  text-align: center;
-  font-weight: 300;
-  opacity: 0;
-  visibility: hidden;
-  transition-duration: 0.3s;
-  display: flex;
-}
-.btn-up a {
-  list-style: none;
-  color: black;
-  text-decoration: none;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  height: 4rem;
+  width: 4rem;
+  position: fixed;
+  background-color: var(--main-color);
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--second-color);
+  z-index: 99;
+  right: calc(4.25rem + 1vw);
+  border-radius: 50%;
+  outline: 0;
+  border: 0;
+  transition: all 0.3s ease-out;
 }
 
-.activar {
-  transition-duration: 0.3s;
-  opacity: 1;
-  visibility: visible;
+.scroll-up-btn:hover {
+  background-color: var(--second-color);
+  color: var(--main-color);
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
 }

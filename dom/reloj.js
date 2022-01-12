@@ -1,33 +1,26 @@
 const d = document;
+
 export function relojDigital(iniciarBtn, detenerBtn) {
-  if (typeof iniciarBtn !== "string") alert(`El parametro deber ser una clase`);
+  const $reloj = d.getElementById("reloj");
+  let tempo;
 
-  // const d = document,
-  const $reloj = d.getElementById("reloj"),
-    tiempoActual = () => {
-      let tiempo = new Date(),
-        hr = tiempo.getHours(),
-        min = tiempo.getMinutes(),
-        sec = tiempo.getSeconds();
-
-      $reloj.innerHTML = `${hr}:${min}:${sec}`;
-
-      setInterval(() => {
-        tiempoActual();
-      }, 1000);
-    };
-
-  tiempoActual();
+  function tiempoActual() {
+    let tiempoReal = new Date().toLocaleTimeString();
+    $reloj.innerHTML = `<h3> ${tiempoReal} </h3>`;
+    console.log(tiempoReal);
+  }
 
   d.addEventListener("click", (e) => {
     if (e.target.matches(iniciarBtn)) {
-      $reloj.classList.add("inicio");
+      tempo = setInterval(() => {
+        tiempoActual();
+      }, 1000);
       d.querySelector(iniciarBtn).setAttribute("disabled", "true");
-      alert("iniciando reloj");
     }
 
     if (e.target.matches(detenerBtn)) {
-      $reloj.classList.remove("inicio");
+      clearInterval(tempo);
+      $reloj.innerHTML = "";
       d.querySelector(iniciarBtn).removeAttribute("disabled");
     }
   });

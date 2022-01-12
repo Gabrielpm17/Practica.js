@@ -3,6 +3,7 @@ import { relojDigital, alarmaDigital } from "./reloj.js";
 import { moveBall } from "./move.js";
 import { cuentaAtras } from "./cuentaAtras.js";
 import botonScroll from "./boton_scroll.js";
+import modoOscuro from "./tema_oscuro.js";
 const d = document;
 
 // -----EVENTOS ONCLICK----
@@ -26,3 +27,5 @@ d.addEventListener("DOMContentLoaded", (e) => {
 d.addEventListener("keydown", (e) => {
   moveBall(e, ".ball", ".stage");
 });
+
+modoOscuro(".btn-dark", "dark-mode");

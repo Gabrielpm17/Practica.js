@@ -6,9 +6,15 @@ import botonScroll from "./boton_scroll.js";
 import modoOscuro from "./tema_oscuro.js";
 import { contenidoResponsivo } from "./enlace_responsivo.js";
 import testerResponsivo from "./tester-responsivo.js";
-const d = document;
+import estadoWifi from "./estado.js";
+import ubicacionActual from "./geolocalizacion.js";
+import buscadorImagenes from "../buscador_img.js";
+import lottery from "./sorteo_digital.js";
 
-// -----EVENTOS ONCLICK----
+const d = document,
+  w = window;
+
+// -----EVENTO A CARGA DEL DOCUENT----
 d.addEventListener("DOMContentLoaded", (e) => {
   hamburgerMenu(".panel-btn", ".panel", ".menu a");
 
@@ -32,6 +38,11 @@ d.addEventListener("DOMContentLoaded", (e) => {
   );
 
   testerResponsivo("formulario");
+
+  ubicacionActual("id-ubicacion");
+  buscadorImagenes(".buscador-img", ".tarjetas", ".contenedor-tarjetas");
+
+  lottery(["gabriel", "vania", "ana"], ".contain-participants", ".btn-winner");
 });
 
 // -----EVENTOS DEL TECLADO-----
@@ -39,4 +50,24 @@ d.addEventListener("keydown", (e) => {
   moveBall(e, ".ball", ".stage");
 });
 
+w.addEventListener("online", (e) => {
+  estadoWifi(".estado-wifi");
+});
+w.addEventListener("offline", (e) => {
+  estadoWifi(".estado-wifi");
+});
+
 modoOscuro(".btn-dark", "dark-mode");
+
+// function webCam() {
+//   const $video = d.getElementById("camara-web");
+//   const videoWeb = navigator.mediaDevices
+//     .getUserMedia({ video: true })
+//     .then((media) => {
+//       $video.srcObject = media;
+//       $video.play();
+//     })
+//     .catch((error) => {
+//       console.log(error);
+//     });
+// }

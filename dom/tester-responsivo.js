@@ -11,7 +11,7 @@ export default function testerReponsivo(form) {
       tester = w.open(
         $form.enlace.value,
         "ventana abierta",
-        `width =${$form.ancho.value} height = ${$form.alto.value}`
+        `innerWidth =${$form.ancho.value} innerhHeight = ${$form.alto.value}`
       );
     }
 

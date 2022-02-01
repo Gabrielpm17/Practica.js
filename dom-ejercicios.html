@@ -11,6 +11,7 @@
 </head>
 
 <body data-dark>
+  <div class="estado-wifi hidden"></div>
   <header class="header">
     <h1>Ejercicios del DOM</h1>
   </header>
@@ -26,8 +27,11 @@
       <a href="#seccion1">Reloj y Alarma digital</a>
       <a href="#seccion2">Eventos del Teclado</a>
       <a href="#seccion3">Cuenta Regresiva</a>
-      <a href="#seccion4">Seccion 4</a>
-      <a href="#seccion5">Seccion 5</a>
+      <a href="#seccion4">Seccion responsiva con js</a>
+      <a href="#seccion5">Tester responsivo</a>
+      <a href="#seccion6">Camara web</a>
+      <a href="#seccion7">Geolocalizacion</a>
+      <a href="#seccion8">Buscador</a>
     </nav>
   </aside>
   <main>
@@ -77,6 +81,57 @@
         <input type="submit" name="probar" value="Probar">
         <input type="button" name="cerrar" value="Cerrar">
       </form>
+    </section>
+    <hr>
+    <section id="seccion6" class="section">
+      <h2>Camara web</h2>
+      <video id="camara-web"></video>
+    </section>
+    <hr>
+    <section id="seccion7" class="section">
+      <h2>Geolocalizacion</h2>
+      <div id="id-ubicacion"></div>
+
+    </section>
+    <hr>
+    <section id="seccion8" class="section">
+      <h2>Buscador de imagenes</h2>
+      <input type="search" placeholder="Buscar" class="buscador-img">
+
+      <article class="contenedor-tarjetas">
+        <figure class="tarjetas">
+          <img src="https://placeimg.com/200/200/arch" alt="Arch">
+          <figcaption class="nombres-titulos">arquitectura</figcaption>
+        </figure>
+        <figure class="tarjetas">
+          <img src="https://placeimg.com/200/200/animals" alt="Animals">
+          <figcaption class="nombres-titulos">animales</figcaption>
+        </figure>
+        <figure class="tarjetas">
+          <img src="https://placeimg.com/200/200/nature" alt="Nature">
+          <figcaption class="nombres-titulos">naturaleza</figcaption>
+        </figure>
+        <figure class="tarjetas">
+          <img src="https://placeimg.com/200/200/people" alt="People">
+          <figcaption class="nombres-titulos">personas</figcaption>
+        </figure>
+        <figure class="tarjetas">
+          <img src="https://placeimg.com/200/200/tech" alt="Tech">
+          <figcaption class="nombres-titulos">tecnologia</figcaption>
+        </figure>
+        <figure class="tarjetas">
+          <img src="https://placeimg.com/200/200/any" alt="Any">
+          <figcaption class="nombres-titulos">cualqueira</figcaption>
+        </figure>
+
+      </article>
+    </section>
+    <hr>
+    <section id="seccion8" class="section">
+      <h2>Sorteo digital</h2>
+      <ul class="contain-participants"></ul>
+      <input type="button" value="ganador" class="btn-winner">
+
     </section>
     <hr>
   </main>

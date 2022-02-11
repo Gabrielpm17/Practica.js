@@ -22,20 +22,23 @@
     </span>
   </button>
 
-  <aside class="panel">
+  <aside class="panel panel-mq">
     <nav class="menu">
-      <a href="#seccion1">Reloj y Alarma digital</a>
-      <a href="#seccion2">Eventos del Teclado</a>
-      <a href="#seccion3">Cuenta Regresiva</a>
-      <a href="#seccion4">Seccion responsiva con js</a>
-      <a href="#seccion5">Tester responsivo</a>
-      <a href="#seccion6">Camara web</a>
-      <a href="#seccion7">Geolocalizacion</a>
-      <a href="#seccion8">Buscador</a>
+      <a href="#seccion1" data-scroll-spy>Reloj y Alarma digital</a>
+      <a href="#seccion2" data-scroll-spy>Eventos del Teclado</a>
+      <a href="#seccion3" data-scroll-spy>Cuenta Regresiva</a>
+      <a href="#seccion4" data-scroll-spy>Seccion responsiva con js</a>
+      <a href="#seccion5" data-scroll-spy>Tester responsivo</a>
+      <a href="#seccion6" data-scroll-spy>Camara web</a>
+      <a href="#seccion7" data-scroll-spy>Geolocalizacion</a>
+      <a href="#seccion8" data-scroll-spy>Buscador</a>
+      <a href="#seccion9" data-scroll-spy>Sorteo digital</a>
+      <a href="#seccion10" data-scroll-spy>Carrusel</a>
+      <a href="#seccion11" data-scroll-spy>Video automatico</a>
     </nav>
   </aside>
-  <main>
-    <section id="seccion1" class="section">
+  <main class="main">
+    <section id="seccion1" class="section" data-scroll-spy data-scroll-spy>
       <h2>Reloj y Alarma digital</h2>
       <div id="reloj" class="reloj-digital">
       </div>
@@ -46,7 +49,7 @@
 
     </section>
     <hr>
-    <section id="seccion2" class="section">
+    <section id="seccion2" class="section" data-scroll-spy data-scroll-spy>
       <h2>Eventos del Teclado</h2>
       <article class="stage">
         <div class="ball"></div>
@@ -54,7 +57,7 @@
       </div>
     </section>
     <hr>
-    <section id="seccion3" class="section">
+    <section id="seccion3" class="section" data-scroll-spy data-scroll-spy>
       <h2>Cuenta Regresiva</h2>
       <div id="cuenta-regresiva" class="count-down">
         <h3>00:00:00:00</h3>
@@ -63,13 +66,13 @@
       <button id="btn-terminar">Terminar Cuenta</button>
     </section>
     <hr>
-    <section id="seccion4" class="section">
+    <section id="seccion4" class="section" data-scroll-spy>
       <h2>Seccion responsiva con Js</h2>
       <div id="mapa">
       </div>
     </section>
     <hr>
-    <section id="seccion5" class="section">
+    <section id="seccion5" class="section" data-scroll-spy>
       <h2> tester responsivo</h2>
       <form id="formulario">
         <input type="url" name="enlace" placeholder="escribe la url" required>
@@ -83,18 +86,18 @@
       </form>
     </section>
     <hr>
-    <section id="seccion6" class="section">
+    <section id="seccion6" class="section" data-scroll-spy>
       <h2>Camara web</h2>
       <video id="camara-web"></video>
     </section>
     <hr>
-    <section id="seccion7" class="section">
+    <section id="seccion7" class="section" data-scroll-spy>
       <h2>Geolocalizacion</h2>
       <div id="id-ubicacion"></div>
 
     </section>
     <hr>
-    <section id="seccion8" class="section">
+    <section id="seccion8" class="section" data-scroll-spy>
       <h2>Buscador de imagenes</h2>
       <input type="search" placeholder="Buscar" class="buscador-img">
 
@@ -127,17 +130,37 @@
       </article>
     </section>
     <hr>
-    <section id="seccion8" class="section">
+    <section id="seccion9" class="section" data-scroll-spy>
       <h2>Sorteo digital</h2>
       <ul class="contain-participants"></ul>
       <input type="button" value="ganador" class="btn-winner">
+    </section>
+    <hr>
+    <section id="seccion10" class="section" data-scroll-spy>
+      <h2>Responsive Slider</h2>
+      <article class="container-slides">
+        <button class="left-btn">izquierda</button>
+        <div class="slides-images">
+          <img src="https://placeimg.com/600/400/arch" alt="Arch" class="image1">
+          <img src="https://placeimg.com/600/400/animals" alt="Animals" class="image2 hidden-btn">
+        </div>
+        <button class="right-btn">derecha</button>
+      </article>
+    </section>
+    <hr>
+    <section id="seccion11" class="section" data-scroll-spy>
+      <h2>Video Autoplay</h2>
+      <div class="video">
+        <video src="sources/Ejercicios del Dom - Brave 2022-02-10 08-58-57.mp4" class="elemento-video"
+          data-smart-video=""></video>
+      </div>
 
     </section>
     <hr>
   </main>
   <button class="scroll-up-btn hidden">⬆</button>
   <button class="btn-dark">🌑</button>
-  <script src="dom/index-dom.js" type="module"></script>
+  <script type="module" src="dom/index-dom.js"></script>
 </body>
 
 </html>

@@ -10,6 +10,9 @@ import estadoWifi from "./estado.js";
 import ubicacionActual from "./geolocalizacion.js";
 import buscadorImagenes from "../buscador_img.js";
 import lottery from "./sorteo_digital.js";
+import slidesMove from "./slides_images.js";
+import scrollSpy from "./intersection_observer.js";
+import autoplayVideo from "./video_autoplay.js";
 
 const d = document,
   w = window;
@@ -43,6 +46,10 @@ d.addEventListener("DOMContentLoaded", (e) => {
   buscadorImagenes(".buscador-img", ".tarjetas", ".contenedor-tarjetas");
 
   lottery(["gabriel", "vania", "ana"], ".contain-participants", ".btn-winner");
+
+  slidesMove(".image1", ".image2", ".right-btn", "left-btn");
+  scrollSpy();
+  autoplayVideo();
 });
 
 // -----EVENTOS DEL TECLADO-----

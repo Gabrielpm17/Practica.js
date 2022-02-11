@@ -1,3 +1,4 @@
+// ----- Codigo propio
 const d = document;
 
 export default function buscadorImagenes(buscador, tarjetaHija, contenedor) {
@@ -29,5 +30,21 @@ export default function buscadorImagenes(buscador, tarjetaHija, contenedor) {
 
   $buscador.addEventListener("keydown", (e) => {
     encontrar();
+  });
+}
+
+// -----Codigo del profesor.
+
+function searchFilters(input, selector) {
+  d.addEventListener("keyup", (e) => {
+    if (e.key === "escape") e.target.value = "";
+
+    if (e.target.matches(input)) {
+      d.querySelectorAll(selector).forEach((el) =>
+        el.textContent.toLowerCase().includes(e.target.value)
+          ? el.classList.remove("la clase")
+          : el.classList.add("laclase")
+      );
+    }
   });
 }

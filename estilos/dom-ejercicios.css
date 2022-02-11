@@ -2,9 +2,9 @@
 :root {
   --main-font: sans-serif;
   --font-size: 16px;
-  --main-color: #f7df1e;
+  --main-color: rgba(167, 123, 0, 1);
   --second-color: #222;
-  --main-modal-color: rgba(247, 222, 30, 0.85);
+  --main-modal-color: rgba(167, 123, 0, 1);
   --second-modal-color: rgba(34, 34, 34, 0.85);
   --container-width: 1200px;
 }
@@ -90,7 +90,7 @@ img {
 }
 
 .menu {
-  width: inherit;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -223,4 +223,120 @@ img {
   width: 22%;
   background-color: var(--second-color);
   color: var(--main-color);
+}
+
+.container-slides {
+  background-color: var(--main-color);
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-btn,
+.right-btn {
+  width: 5rem;
+  height: 5rem;
+  font-size: 1.1rem;
+  color: var(--main-color);
+  background-color: var(--second-color);
+  border-radius: 50%;
+  border-style: none;
+  margin: 1rem;
+}
+
+.slides-images {
+  background-color: var(--second-color);
+  height: 100%;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.left-btn:hover,
+.right-btn:hover {
+  background-color: var(--main-color);
+  color: var(--second-color);
+  border: thin solid var(--second-color);
+}
+
+.image1 {
+  position: absolute;
+  transition: opacity 1s ease;
+}
+.image2 {
+  position: absolute;
+}
+
+.hidden-btn {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease;
+}
+
+/* *************scrollSpy ***************/
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    grid-template-rows: 4rem auto;
+    grid-template-areas:
+      "header header"
+      "main panel";
+  }
+  main {
+    grid-area: main;
+    border: thin dashed darkblue;
+  }
+  .header {
+    grid-area: header;
+  }
+  .panel {
+    grid-area: panel;
+    position: sticky;
+    top: 4rem;
+    opacity: 1;
+    visibility: visible;
+    transform: translate(0, 0);
+    background-color: var(--second-color);
+    justify-content: flex-start;
+    align-self: start;
+  }
+  .panel-btn {
+    display: none;
+  }
+  menu {
+    justify-content: start;
+    text-align: right;
+  }
+  .menu a {
+    font-size: 1rem;
+    padding: 0.75rem;
+  }
+  .menu a:hover,
+  .menu a.active {
+    color: var(--second-color);
+    background-color: var(--main-color);
+  }
+  .scroll-up-btn {
+    right: initial;
+    left: calc(4.25rem + 1vw);
+  }
+}
+
+.video {
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.video video {
+  width: 100%;
+  height: auto;
 }
